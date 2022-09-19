@@ -1,0 +1,784 @@
+
+file {
+	name="/home/quan/adls/galil_ctrl_io_ssrl.adl"
+	version=030117
+}
+display {
+	object {
+		x=340
+		y=245
+		width=450
+		height=350
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+composite {
+	object {
+		x=22
+		y=35
+		width=400
+		height=300
+	}
+	"composite name"=""
+	children {
+		rectangle {
+			object {
+				x=22
+				y=35
+				width=400
+				height=300
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		text {
+			object {
+				x=41
+				y=65
+				width=45
+				height=19
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Chan."
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=157
+				y=65
+				width=45
+				height=19
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Description"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=168
+				y=41
+				width=65
+				height=23
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Input"
+		}
+		text {
+			object {
+				x=347
+				y=65
+				width=45
+				height=19
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Volts"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=277
+				y=65
+				width=45
+				height=19
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Deadb"
+			align="horiz. centered"
+		}
+		composite {
+			object {
+				x=36
+				y=266
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=36
+						y=275
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai1.VAL"
+					}
+					textix=" 7"
+					align="horiz. centered"
+				}
+				"text entry" {
+					object {
+						x=66
+						y=267
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai6_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=266
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai6Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=338
+						y=270
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai6_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=236
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=36
+						y=245
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai1.VAL"
+					}
+					textix=" 6"
+					align="horiz. centered"
+				}
+				"text entry" {
+					object {
+						x=66
+						y=237
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai5_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=236
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai5Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=338
+						y=240
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai5_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=208
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=338
+						y=212
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai4_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=208
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai4Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=66
+						y=209
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai4_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				text {
+					object {
+						x=36
+						y=217
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai0.VAL"
+					}
+					textix=" 5"
+					align="horiz. centered"
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=179
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=36
+						y=188
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai2.VAL"
+					}
+					textix=" 4"
+					align="horiz. centered"
+				}
+				"text entry" {
+					object {
+						x=66
+						y=180
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai3_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=179
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai3Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=338
+						y=183
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai3_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=151
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=36
+						y=160
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai1.VAL"
+					}
+					textix=" 3"
+					align="horiz. centered"
+				}
+				"text entry" {
+					object {
+						x=66
+						y=152
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai2_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=151
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai2Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=338
+						y=155
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai2_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=121
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=338
+						y=125
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai1_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=121
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai1Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=66
+						y=122
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai1_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				text {
+					object {
+						x=36
+						y=130
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai1.VAL"
+					}
+					textix=" 2"
+					align="horiz. centered"
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=89
+				width=366
+				height=30
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=338
+						y=93
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai0_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=89
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai0Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=66
+						y=90
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai0_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				text {
+					object {
+						x=36
+						y=98
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai0.VAL"
+					}
+					textix=" 1"
+					align="horiz. centered"
+				}
+			}
+		}
+		composite {
+			object {
+				x=36
+				y=298
+				width=366
+				height=29
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=338
+						y=304
+						width=64
+						height=23
+					}
+					monitor {
+						chan="$(P)$(R)Ai7_MON.VAL"
+						clr=14
+						bclr=51
+					}
+					align="horiz. right"
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=264
+						y=298
+						width=64
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai7Deadb_SP.VAL"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=66
+						y=298
+						width=191
+						height=29
+					}
+					control {
+						chan="$(P)$(R)Ai7_MON.DESC"
+						clr=14
+						bclr=51
+					}
+					limits {
+					}
+				}
+				text {
+					object {
+						x=36
+						y=308
+						width=26
+						height=19
+					}
+					"basic attribute" {
+						clr=14
+					}
+					"dynamic attribute" {
+						chan="$(P)$(R)Ai2.VAL"
+					}
+					textix=" 8"
+					align="horiz. centered"
+				}
+			}
+		}
+	}
+}
+text {
+	object {
+		x=95
+		y=3
+		width=130
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Galil I/O 47162"
+}
+text {
+	object {
+		x=243
+		y=4
+		width=80
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Analog I/O"
+}
