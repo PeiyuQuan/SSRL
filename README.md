@@ -1,1 +1,16 @@
 # adl
+export EPICS_BASE="${HOME}/epics/base"
+export EPICS_HOST_ARCH=`${EPICS_BASE}/startup/EpicsHostArch`
+export PATH="${PATH}:${EPICS_BASE}/bin/${EPICS_HOST_ARCH}"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${EPICS_BASE}/lib/${EPICS_HOST_ARCH}"
+export EPICS_DISPLAY_PATH="${HOME}/adls"
+export EPICS_EXTENSIONS="${HOME}/epics/extensions"
+export PATH="${PATH}:${EPICS_EXTENSIONS}/bin/${EPICS_HOST_ARCH}"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${EPICS_EXTENSIONS}/lib/${EPICS_HOST_ARCH}"
+export EPICS_CA_AUTO_ADDR_LIST=NO
+#export EPICS_CA_ADDR_LIST=192.0.2.255
+export EPICS_CA_ADDR_LIST=192.168.1.255
+#export CAQTDM_URL_DISPLAY_PATH="${HOME}/uis"
+export CAQTDM_DISPLAY_PATH="${HOME}/epics/extensions/src/caqtdm/caQtDM_Parsers:${HOME}/epics/extensions/src/caqtdm/caQtDM_Tests:${HOME}/uis"
+#export CAQTDM_DISPLAY_PATH="${HOME}/epics/extensions/src/caqtdm/caQtDM_Tests"
+export QT_PLUGIN_PATH="${HOME}/epics/extensions/src/caqtdm/caQtDM_Binaries"
