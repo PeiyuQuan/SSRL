@@ -1,0 +1,11 @@
+epicsEnvSet("IOC","iocIC")
+epicsEnvSet("TOP","/home/specadm/epics/support/xxx")
+epicsEnvSet("TOP","/home/specadm/epics/support/motor/modules/motorNewFocus/iocs/newFocusIOC")
+epicsEnvSet("MOTOR","/home/specadm/epics/support/motor")
+epicsEnvSet("SUPPORT","/home/specadm/epics/support")
+epicsEnvSet("ASYN","/home/specadm/epics/support/asyn")
+epicsEnvSet("EPICS_BASE","/home/specadm/epics/base")
+epicsEnvSet("AUTOSAVE","/home/specadm/epics/support/ipac")
+epicsEnvSet("BUSY","/home/specadm/epics/support/busy")
+epicsEnvSet("SNCSEQ","/home/specadm/epics/support/seq-2-2-9")
+

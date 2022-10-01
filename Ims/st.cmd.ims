@@ -1,0 +1,33 @@
+< envPaths
+
+# Tell EPICS all about the record types, device-support modules, drivers, etc.
+dbLoadDatabase("../../dbd/iocxxxLinux.dbd")
+iocxxxLinux_registerRecordDeviceDriver(pdbbase)
+
+### Motors
+# Motors substitutions, customize this for your motor
+dbLoadTemplate "motor.substitutions.ims"
+
+# Configure asyn communication port, first
+# drvAsynIPPortConfigure(IOPortName, port, priority, disable auto-connect, no process EOS)
+drvAsynIPPortConfigure("MTH", "192.168.33.1:503 TCP", 0, 0, 0 )
+drvAsynIPPortConfigure("MZ", "192.168.33.2:503 TCP", 0, 0, 0 )
+drvAsynIPPortConfigure("MX", "192.168.33.3:503 TCP", 0, 0, 0 )
+drvAsynIPPortConfigure("MY", "192.168.33.4:503 TCP", 0, 0, 0 )
+# Configure one controller per motor, each controller just has 1 axis
+# motorPortName, portName, deviceName, movingPollPeriod, idlePollPeriod
+ImsMDrivePlusCreateController("BL00:IMS0", "MTH", "", 200, 5000)
+ImsMDrivePlusCreateController("BL00:IMS1", "MZ", "", 200, 5000)
+ImsMDrivePlusCreateController("BL00:IMS2", "MX", "", 200, 5000)
+ImsMDrivePlusCreateController("BL00:IMS3", "MY", "", 200, 5000)
+
+# Optional: Enable tracing
+#asynSetTraceIOMask("IMS1",0,0)
+#asynSetTraceMask("IMS1",0,9)
+
+# Initialize the IOC and start processing records
+iocInit()
+
+
+
+

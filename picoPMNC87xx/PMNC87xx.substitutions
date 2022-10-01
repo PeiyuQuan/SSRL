@@ -1,0 +1,11 @@
+file "$(MOTOR)/db/motor.db"
+{
+pattern
+{P,             N,       M,        DTYP,         C,      S,      DESC,           EGU,            DIR,    VELO,   VBAS,   ACCL,   BDST,   BVEL,   BACC,   MRES,   PREC,   DHLM,   DLLM,   INIT}
+{BL00:PICOD1:,     1,     "MOTOR$(N)",  "PMNC87xx",     0,      0,      "motor $(N)",   mm,        Pos,    1,      .1,     .2,     0,      1,       .2,    0.00002, 5,     1000,    -1000,   ""}
+{BL00:PICOD1:,     2,     "MOTOR$(N)",  "PMNC87xx",     0,      1,      "motor $(N)",   mm,        Pos,    1,      .1,     .2,     0,      1,       .2,    0.00002,   5,   1000,    -1000,   ""}
+{BL00:PICOD1:,     3,     "MOTOR$(N)",  "PMNC87xx",     0,      2,      "motor $(N)",   mm,        Pos,    1,      .1,     .2,     0,      1,       .2,    0.00002,   5,   1000,    -1000,   ""}
+#{newFocus:,     4,     "m$(N)",  "PMNC87xx",     0,      3,      "motor $(N)",   degrees,        Pos,    1,      .1,     .2,     0,      1,       .2,    2.5e-4, 5,      100,    -100,   ""}
+#{newFocus:,     5,     "m$(N)",  "PMNC87xx",     0,      4,      "motor $(N)",   degrees,        Pos,    1,      .1,     .2,     0,      1,       .2,    2.5e-4, 5,      100,    -100,   ""}
+#{newFocus:,     6,     "m$(N)",  "PMNC87xx",     0,      5,      "motor $(N)",   degrees,        Pos,    1,      .1,     .2,     0,      1,       .2,    2.5e-4, 5,      100,    -100,   ""}
+}
